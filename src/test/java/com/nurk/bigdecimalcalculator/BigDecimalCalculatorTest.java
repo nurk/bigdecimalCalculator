@@ -1,4 +1,4 @@
-package com.tbriers.bigdecimalcalculator;
+package com.nurk.bigdecimalcalculator;
 
 import org.junit.jupiter.api.Test;
 
