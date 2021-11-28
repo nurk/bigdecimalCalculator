@@ -51,6 +51,6 @@ class BigDecimalCalculatorTest {
 
     @Test
     void calculate_noBinaryRepresentationError() {
-        assertThat(BigDecimalCalculator.calculate("0.03 - 0.02", 2, HALF_UP)).isEqualByComparingTo("0.01");
+        assertThat(BigDecimalCalculator.calculate("0.03 - 0.02", 4, HALF_UP)).isEqualByComparingTo("0.0100");
     }
 }
