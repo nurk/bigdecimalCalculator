@@ -49,8 +49,8 @@ public class BigDecimalCalculator {
     private BigDecimal expr() {
         int sign = 1;
         accept(Symbol.PLUS);
-        if (accept(Symbol.MINUS)) {
-            sign = -1;
+        while (accept(Symbol.MINUS)) {
+            sign *= -1;
         }
         BigDecimal value = term().multiply(BigDecimal.valueOf(sign));
         while (Symbol.isAddOp(token)) {
