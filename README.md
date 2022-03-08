@@ -6,6 +6,6 @@ When you need to perform calculations of formulas that require a higher precisio
 
 Example:
 
-```BigDecimal result = BigDecimalCalculator.calculate(String.format("((%s - %s) / %s) * (%s + %s)", "2", 1d, 1L, 2, BigDecimal.ONE), 30, HALF_UP);```
+```BigDecimal result = BigDecimalCalculator.calculate(String.format("((%s - %s) / %s) * (%s + %s)", "2", 1d, 1L, 2, BigDecimal.ONE.toPlainString()), 30, HALF_UP);```
 
 This gives the following result: `3.000000000000000000000000000000`
