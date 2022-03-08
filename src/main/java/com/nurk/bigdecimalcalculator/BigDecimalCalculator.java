@@ -79,15 +79,19 @@ public class BigDecimalCalculator {
 
     private BigDecimal factor() {
         BigDecimal value = BigDecimal.ZERO;
+        BigDecimal sign = BigDecimal.ONE;
+        while (accept(Symbol.MINUS)) {
+            sign = sign.multiply(new BigDecimal("-1"));
+        }
         if (tokenIs(Symbol.WORD)) {
             try {
-                value = new BigDecimal(tokens.sval);
+                value = new BigDecimal(tokens.sval).multiply(sign);
                 getToken();
             } catch (Exception e) {
                 throwError("factor is not a number");
             }
         } else if (accept(Symbol.OPEN)) {
-            value = expr();
+            value = expr().multiply(sign);
             expect(Symbol.CLOSE);
         } else {
             throwError("factor error");
