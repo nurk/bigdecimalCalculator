@@ -47,11 +47,8 @@ public class BigDecimalCalculator {
     }
 
     private BigDecimal expr() {
-        int sign = 1;
         accept(Symbol.PLUS);
-        while (accept(Symbol.MINUS)) {
-            sign *= -1;
-        }
+        int sign = getSign();
         BigDecimal value = term().multiply(BigDecimal.valueOf(sign));
         while (Symbol.isAddOp(token)) {
             if (accept(Symbol.PLUS)) {
@@ -62,6 +59,14 @@ public class BigDecimalCalculator {
             }
         }
         return value;
+    }
+
+    private int getSign() {
+        int sign = 1;
+        while (accept(Symbol.MINUS)) {
+            sign *= -1;
+        }
+        return sign;
     }
 
     private BigDecimal term() {
@@ -79,10 +84,7 @@ public class BigDecimalCalculator {
 
     private BigDecimal factor() {
         BigDecimal value = BigDecimal.ZERO;
-        int sign = 1;
-        while (accept(Symbol.MINUS)) {
-            sign *= -1;
-        }
+        int sign = getSign();
         if (tokenIs(Symbol.WORD)) {
             try {
                 value = new BigDecimal(tokens.sval).multiply(BigDecimal.valueOf(sign));
