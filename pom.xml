@@ -4,7 +4,7 @@
 
     <groupId>io.github.nurk</groupId>
     <artifactId>bigdecimal-calculator</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
 
     <name>BigDecimal Calculator</name>
     <description>Use a formula to calculate at high precision</description>
@@ -25,7 +25,7 @@
         <connection>scm:git:git@github.com:nurk/bigdecimalCalculator.git</connection>
         <developerConnection>scm:git:git@github.com:nurk/bigdecimalCalculator.git</developerConnection>
         <url>https://github.com/nurk/bigdecimalCalculator/tree/master</url>
-      <tag>HEAD</tag>
+      <tag>bigdecimal-calculator-1.1</tag>
   </scm>
 
     <properties>
