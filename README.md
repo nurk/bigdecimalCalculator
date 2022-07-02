@@ -1,3 +1,5 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/nurk/bigdecimalCalculator/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/nurk/bigdecimalCalculator/tree/master)
+
 # Bigdecimal Calculator
 
 Heavily inspired by https://sites.google.com/site/drjohnbmatthews/enumerated-functions
